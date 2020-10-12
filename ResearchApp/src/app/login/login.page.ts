@@ -35,15 +35,15 @@ new_item_form: FormGroup;
 
   ngOnInit() {
 
-  	  	this.new_item_form = this.formBuilder.group({
-      email: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required)
-    });
+	this.new_item_form = this.formBuilder.group({
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+  });
 
   }
 
   signup(){
-  	this.router.navigate(['/signup']);
+  	this.router.navigate(['/register']);
   }
 
   login(item){
@@ -68,7 +68,7 @@ new_item_form: FormGroup;
     var user= firebase.auth().currentUser;
         console.log("login succeeded");
         console.log(user.uid);
-
+		
         
 
 

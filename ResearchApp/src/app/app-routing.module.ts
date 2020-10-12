@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   },
+  {
+    path: 'pass',
+    loadChildren: () => import('./pass/pass.module').then( m => m.PassPageModule)
+  },
 ];
 
 @NgModule({

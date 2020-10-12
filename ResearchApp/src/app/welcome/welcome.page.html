@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>welcome</ion-title>
+    <ion-title>Welcome</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-radio-group allow-empty-selection="false" name="radio-group" (ionChange)="passHandler($event)" (ionSelect)="passChosen($event)" #radioGroup>
+      <ion-list-header>
+        <ion-label>Choose A Parking Pass</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Garage</ion-label>
+        <ion-radio slot="start" value="Garage"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Lot</ion-label>
+        <ion-radio slot="start" value="Lot"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+    <ion-button (click)="next()">Next</ion-button>
+  </ion-list>
+  
 </ion-content>
